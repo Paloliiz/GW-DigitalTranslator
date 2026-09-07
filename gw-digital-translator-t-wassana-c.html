@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ภาระงานกลุ่มพิเศษ: นักแปลดิจิทัล</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f4f7;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 40px 60px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 1200px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: none;
+        }
+        .container.active {
+            display: block;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .nav-buttons button {
+            padding: 10px 25px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 25px;
+            background-color: #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        .nav-buttons button:hover, .nav-buttons button.active {
+            background-color: #0056b3;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #0056b3;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        h2 {
+            color: #0056b3;
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+            margin-top: 0;
+            text-align: left;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #444;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .column {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .box {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fafafa;
+            min-width: 300px;
+        }
+        .box h3 {
+            color: #007bff;
+            margin-top: 0;
+        }
+        .news-headline {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #2c3e50;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+        }
+        .example-sign {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #e9ecef;
+            text-align: center;
+        }
+        .signage-text-en {
+            font-size: 1.1em;
+            font-style: italic;
+            color: #555;
+        }
+        .signage-text-th {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav-buttons">
+    <button onclick="showPage('cover')">หน้าปก</button>
+    <button onclick="showPage('part1')">ส่วนที่ 1: การแปลข่าว</button>
+    <button onclick="showPage('part2')">ส่วนที่ 2: การออกแบบป้าย</button>
+</div>
+
+<div id="cover" class="container active">
+    <h1>ภาระงานกลุ่มพิเศษ</h1>
+    <h1>นักแปลดิจิทัล (Digital Translator)</h1>
+    <p>รายวิชา การแปลภาษาอังกฤษ 1 (อ30209) ครูผู้สอน คุณครูวาสนา  ชมภูโคตร</p>
+    <div class="footer">
+        <p>จัดทำโดย... (รายชื่อสมาชิกกลุ่ม)</p>
+    </div>
+</div>
+
+<div id="part1" class="container">
+    <h2>ส่วนที่ 1: การแปลข่าวและบทความสั้น</h2>
+    <div class="content">
+        <p><strong>ภาระงาน:</strong> ให้แต่ละกลุ่มเลือกข่าวสั้นจากเว็บไซต์ที่น่าเชื่อถือ แล้วแปลและสรุปเป็นภาษาไทย</p>
+        <div class="column">
+            <div class="box">
+                <h3>วิธีการทำงาน</h3>
+                <ul>
+                    <li><strong>เลือกข่าว:</strong> หาข่าวจากเว็บไซต์ที่แนะนำ เช่น <a href="https://www.newsinlevels.com/" target="_blank">News in Levels</a> หรือ <a href="https://learningenglish.voanews.com/" target="_blank">VOA Learning English</a></li>
+                    <li><strong>แปลและสรุป:</strong> แปลและสรุปเนื้อหาข่าวให้กระชับและถูกต้องตามบริบท</li>
+                    <li><strong>ออกแบบใน Canva:</strong> สร้างสไลด์ 3 หน้าเพื่อนำเสนอผลงาน</li>
+                </ul>
+            </div>
+            <div class="box">
+                <h3>ตัวอย่างสไลด์ใน Canva</h3>
+                <p class="news-headline">New AI-powered stethoscope can detect heart problems 'in seconds'</p>
+                <br>
+                <h4>สไลด์ที่ 1: เนื้อหาต้นฉบับ</h4>
+                <p>วางเนื้อหาข่าวภาษาอังกฤษจากเว็บไซต์</p>
+                <hr>
+                <h4>สไลด์ที่ 2: บทสรุปข่าว</h4>
+                <p>หูฟังแพทย์ที่ขับเคลื่อนด้วย AI สามารถตรวจจับปัญหาหัวใจได้ในไม่กี่วินาที</p>
+                <hr>
+                <h4>สไลด์ที่ 3: วิเคราะห์สำนวน (ถ้ามี)</h4>
+                <ul>
+                    <li><strong>สำนวน:</strong> a game changer</li>
+                    <li><strong>ความหมาย:</strong> สิ่งที่เข้ามาเปลี่ยนสถานการณ์ให้ดีขึ้นอย่างมาก</li>
+                    <li><strong>สำนวนไทย:</strong> พลิกโฉมวงการ</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>คะแนนส่วนนี้: 15 คะแนน</p>
+    </div>
+</div>
+
+<div id="part2" class="container">
+    <h2>ส่วนที่ 2: การออกแบบป้ายประกาศสองภาษา</h2>
+    <div class="content">
+        <p><strong>ภาระงาน:</strong> ให้แต่ละกลุ่มเลือกสำนวนที่เรียนหรือสนใจมาอย่างน้อย 2 สำนวน แล้วนำมาสร้างเป็นป้ายประกาศใน Canva กำหนดให้ 1 สไลด์ ต่อ 1 ป้ายประกาศ</p>
+        <div class="column">
+            <div class="box">
+                <h3>ป้ายประกาศที่ 1</h3>
+                <div class="example-sign">
+                    <p class="signage-text-en">"Don't <strong>spill the beans</strong>!"</p>
+                    <p class="signage-text-th">"ห้าม <strong>เปิดเผยความลับ</strong>!"</p>
+                    <p><strong>ตัวอย่างการใช้งาน:</strong> ป้ายเตือนในห้องเตรียมงานเลี้ยงเซอร์ไพรส์</p>
+                </div>
+            </div>
+            <div class="box">
+                <h3>ป้ายประกาศที่ 2</h3>
+                <div class="example-sign">
+                    <p class="signage-text-en">"Feeling like a <strong>fish out of water</strong>? Let us help."</p>
+                    <p class="signage-text-th">"รู้สึกเหมือน <strong>อยู่ผิดที่ผิดทาง</strong> ใช่ไหม? ให้เราช่วยคุณได้"</p>
+                    <p><strong>ตัวอย่างการใช้งาน:</strong> ป้ายต้อนรับนักเรียนใหม่ในโรงเรียน</p>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <h3>วิธีการทำงาน</h3>
+            <ul>
+                <li><strong>เลือกสำนวน:</strong> เลือกสำนวนที่น่าสนใจอย่างน้อย 2 สำนวน</li>
+                <li><strong>สร้างสถานการณ์:</strong> คิดสถานการณ์ที่เหมาะกับสำนวน</li>
+                <li><strong>ออกแบบใน Canva:</strong> สร้างป้ายประกาศที่มีทั้งภาษาอังกฤษและภาษาไทย พร้อมองค์ประกอบกราฟิกให้สวยงาม</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <p>คะแนนส่วนนี้: 15 คะแนน</p>
+    </div>
+</div>
+
+<script>
+    function showPage(pageId) {
+        const pages = document.querySelectorAll('.container');
+        pages.forEach(page => {
+            page.classList.remove('active');
+        });
+        document.getElementById(pageId).classList.add('active');
+
+        const buttons = document.querySelectorAll('.nav-buttons button');
+        buttons.forEach(btn => {
+            btn.classList.remove('active');
+        });
+        event.currentTarget.classList.add('active');
+    }
+    // Set the initial active page
+    document.addEventListener('DOMContentLoaded', () => {
+        showPage('cover');
+        document.querySelector('.nav-buttons button').classList.add('active');
+    });
+</script>
+
+</body>
+</html>
